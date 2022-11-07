@@ -26,7 +26,7 @@ class ELKController {
 
 	@RequestMapping(value = "/elk")
 	public String helloWorld() {
-		String response = "Welcome to JavaInUse" + new Date();
+		String response = "Welcome to javainuse" + new Date();
 		LOG.log(Level.INFO, response);
 
 		return response;
@@ -36,7 +36,7 @@ class ELKController {
 	public String exception() {
 		String response = "";
 		try {
-			throw new Exception("Exception has occured....");
+			throw new Exception("Opps Exception raised....");
 		} catch (Exception e) {
 			e.printStackTrace();
 			LOG.error(e);
@@ -51,4 +51,5 @@ class ELKController {
 
 		return response;
 	}
+	
 }
